@@ -28,7 +28,6 @@ int main(int argc, char **argv) {
 	pEnumerator->EnumAudioEndpoints(EDataFlow::eAll, DEVICE_STATE_UNPLUGGED, &pDevices);
 	
 	if (pEnumerator) {
-
 		if (pDevices) {
 			pDevices->GetCount(&nDevices);
 
@@ -44,17 +43,14 @@ int main(int argc, char **argv) {
 						PropVariantInit(&t);
 						pProperties->GetValue(PKEY_Device_FriendlyName, &t);
 						wprintf(L"%s\n", t.pwszVal);
-
 						pProperties->Release();
 					}
 
 					pDevice->Release();
 				}
 			}
-
 			pDevices->Release();
 		}
-
 		pEnumerator->Release();
 	}
 
