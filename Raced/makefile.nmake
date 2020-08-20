@@ -1,0 +1,2 @@
+main:
+	$(CXX) /EHsc /Ox /Wall /std:c++latest /openmp main.cpp /Fo:release/Win/main.obj /Fe:release/Win/main.exe
