@@ -4,7 +4,6 @@
 #include <functiondiscoverykeys_devpkey.h>
 #include <stdio.h>
 
-
 int main(int argc, char **argv) {
 	IMMDeviceEnumerator *pEnumerator = NULL;
 
@@ -18,7 +17,7 @@ int main(int argc, char **argv) {
 		CLSCTX_ALL, IID_IMMDeviceEnumerator,
 		(void**)&pEnumerator);
 
-	IMMDeviceCollection *pDevices;
+	IMMDeviceCollection *pDevices = NULL;
 	UINT nDevices = 0;
 
 	//***
