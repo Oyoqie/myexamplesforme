@@ -19,7 +19,7 @@ int main() {
 		for (UINT j = 0; j < S; ++j) {
 			UINT t = omp_get_thread_num();
 			//#pragma omp atomic
-			result ^= (0x1 << (j % 2)) << t * h;
+			result ^= (0x1 << (j % h)) << t * h;
 		}
 	}
 
