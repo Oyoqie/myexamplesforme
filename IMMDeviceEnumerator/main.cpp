@@ -20,10 +20,6 @@ int main(int argc, char **argv) {
 	IMMDeviceCollection *pDevices = NULL;
 	UINT nDevices = 0;
 
-	//***
-	//*** Remarks:
-	//***			Stick ur finger in my ass
-
 	pEnumerator->EnumAudioEndpoints(EDataFlow::eAll, DEVICE_STATE_UNPLUGGED, &pDevices);
 	
 	if (pEnumerator) {
